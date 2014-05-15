@@ -8,7 +8,7 @@
 \date{\today}
 \setlength{\parskip}{11pt}
 \setlength{\parindent}{0pt}
-\titleformat*{\subsection}{\normalsize\bfseries\itshape}
+\titleformat*{\subsection}{\normalsize\itshape}
 \begin{document}
 \maketitle
 \section{Introduction}
@@ -25,9 +25,28 @@ Given that a large proportion of the users of the BBC Redux and World Service Ar
 
 This approach has already been used with some succcess on related information retrieval problems. \cite{Lang1995} describes a use of an actively learnt model based on the minial description length principle to perform content-based filtering and recommendation on a corpus of Usenet posts, and reports an improvement in precision over TF-IDF (a modified version of which was used in \cite{Raimond2012}). In addition, \cite{McCallum1998} describes a novel use of Active learning to imporove the accuracy of a naive Bayes classifier where pre-labelled training data is sparse.
 
-We propose to
-
+We propose to build upon these techniques (and further related work described in section \ref{sef:Related work}) in order
 \section{Methodology}
+
+This thesis would provide a large-scale empirical evaluation of the use of active learning for semantic annotation in the BBC's Redux and World Service archive, and its effectiveness in solving information retrieval challenges for the users of these services. This would include:
+
+\subsection{Evaluation of existing active learning approaches for information retrieval in the BBC's Archive}
+
+A thorough, empirical analysis of the effectiveness of active learning techniques already published in the literature, including a comprehensive appraisal of different query strategies and error measures.
+
+Appraisal of active learning vs passive supervised techniques WRT number of examples needed to achieve given epsilon
+
+\subsection{Advancing the state-of-the-art in active learning for text classification, topic modelling and related natural language processing challenges}
+
+The development of novel approaches, with a focus on active learning of parameters of probabilistic topic models.
+
+\subsection{Development of methods for incorporating prior knowledge into the active learning framework}
+
+With a focus on relational and heirarchical topic information, ontologies, semantic web
+
+\subsection{Investigation of human-computer interaction challenges related to active learning}
+
+Within the context of IR.
 \label{sec:Methodology}
 \section{Related work}
 \label{sec:Related work}
