@@ -18,11 +18,15 @@ We proposes an \textit{Active learning} approach (\cite{Settles2012}) to this ta
 
 This project would build upon existing work in the field of active learning, natural language processing and topic modelling (reviewed in section \ref{sec:Related work}), developing a novel approach to topic-based information retrieval in large media archives with wider applications to fields such as E-discovery for the legal profession, and computer-assisted reporting. In addition, we are confident that the properties of this particular use case would serve to motivate research which would constitute an original contribution to the machine learning and natural language processing literature (discussed in more detail in section \ref{sec:Methodology}).
 \section{Background}
+\label{sec:Background}
 The challenge of automatically annotating documents with structured semantic metadata has been addressed in previous projects by BBC Research and Development, including work on automated concept tagging and  document linking. However, to date, this work has consisted of using supervised learning models which require a training set which must be compiled by hand in advance (as in \cite{Raimond2013}), or substituted by some heuristic or external source of information which serves as a suitable proxy for ground truth (as in \cite{Raimond2012}).
 
 Given that a large proportion of the users of the BBC Redux and World Service Archive systems are journalists, researchers and programme makers with a significant degree of knowledge around the topics of the programmes that they are seeking, it would be advantageous to leverage this knowledge in identifying topic structure within the corpus. Active learning provides a principled framework for this, by allowing a model to be incrementally trained by querying a human oracle for ground-truth classifications of documents from the corpus.
 
-This approach has already been used with some succcess on related information retrieval problems. \cite{Lang1995} describes a use of an actively learnt model based on the minial description length principle to perform content-based filtering and recommendation on a corpus of Usenet posts, and reports an improvement in precision over TF-IDF (a modified version of which was used in \cite{Raimond2012}). In addition, \cite{MacCallum1998}
+This approach has already been used with some succcess on related information retrieval problems. \cite{Lang1995} describes a use of an actively learnt model based on the minial description length principle to perform content-based filtering and recommendation on a corpus of Usenet posts, and reports an improvement in precision over TF-IDF (a modified version of which was used in \cite{Raimond2012}). In addition, \cite{McCallum1998} describes a novel use of Active learning to imporove the accuracy of a naive Bayes classifier where pre-labelled training data is sparse.
+
+We propose to
+
 \section{Methodology}
 \label{sec:Methodology}
 \section{Related work}
