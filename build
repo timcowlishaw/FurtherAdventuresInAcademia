@@ -1,0 +1,10 @@
+latex proposal
+bibtex proposal
+latex proposal
+dvipdf proposal
+echo -e "\nPossibly Misspelled words: "
+aspell --lang=en create master ./stopwords.rws < stopwords.wordlist
+cat proposal.tex | aspell list -d en_GB --mode=tex --add-extra-dicts=./stopwords.rws
+echo -e "\nWord counts:"
+texcount proposal.tex
+open -a Preview proposal.pdf
