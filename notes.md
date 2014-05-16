@@ -22,6 +22,16 @@
     - Investigation of Human Computer Interaction and IR challenges related to active learning
 
 
+## Notes from chat with Nicolas @ detective.io
+
+ - Precision / recall tradeoff is hard for journalism! Depends on context / needs.
+ - detective.io entirely manual classification / entry
+ - user-defined ontologies very useful
+ - Focused more on long-term, open ended investigation than highly time-sensitive 'breaking news' stuff.
+ - Talk to [Hille van der Kaa](http://hillevanderkaa.wix.com/deuitgeeffabriek#!english/c6rz) at [University of Tilberg](http://www.tilburguniversity.edu/education/masters-programmes/data-journalism/).
+ - UI frustrations with existing ML tools like [PULS](http://puls.cs.helsinki.fi/) - not solving the right problem.
+ - Mentioned [Overview](http://overview.ap.org/) - tool used for discovery within large text corpora.
+ - Problems with big general-purpose datasets eg FiveThirtEight on [Nigerian Kidnappings](http://fivethirtyeight.com/datalab/nigeria-kidnapping/) and use of [GDELT](http://gdeltproject.org/), see [here](https://storify.com/AABoyles/how-to-gdelt-properly?utm_source=t.co&utm_content=storify-pingback&utm_campaign=&awesm=sfy.co_qVYB&utm_medium=sfy.co-twitter) and [here](https://source.opennews.org/en-US/articles/gdelt-decontextualized-data/).
 
 ## Email to James @ Guardian
   Hi there James,
