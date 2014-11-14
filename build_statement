@@ -1,0 +1,7 @@
+pdflatex personal_statement
+echo -e "\nPossibly Misspelled words: "
+aspell --lang=en create master ./stopwords.rws < stopwords.wordlist
+cat personal_statement.tex | aspell list -d en_GB --mode=tex --add-extra-dicts=./stopwords.rws
+echo -e "\nWord counts:"
+texcount personal_statement.tex
+open -a Preview personal_statement.pdf
