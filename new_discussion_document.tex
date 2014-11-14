@@ -1,0 +1,56 @@
+\documentclass[a4paper, 11pt]{article}
+\title{PhD thesis proposal: Active learning of concept maps for learning and information retrieval}
+\author{Tim Cowlishaw}
+\usepackage{verbatim,titlesec,lmodern,draftwatermark}
+\usepackage[T1]{fontenc}
+\usepackage[backgroundcolor=white, linecolor=gray]{todonotes}
+\usepackage[backend=bibtex, citestyle=authoryear-ibid]{biblatex}
+\addbibresource{/Users/tim/Documents/library.bib}
+\date{\today}
+\setlength{\parskip}{11pt}
+\setlength{\parindent}{0pt}
+\titleformat*{\subsection}{\normalsize\itshape}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Concept maps (\cite{Novak2008a}) are a useful means of representing knowledge in educational and information-retrieval settings, consisting of a directed graph depicting key concepts and relationships in some domain (which may be a general area of knowledge, or ideas mentioned in a particular document or media artefact such as a television programme). However, creating such maps is a time-consuming process requiring expert attention.
+
+There have been many recent advances in machine-learning of hierarchical and relational structures which offer a means of automating this process (\cite{Getoor2007} provides a useful overview). However, supervised machine learning techniques still require a manually assembled training set as a source of ground truth, the preparation of which can frequently be prohibitively time consuming in itself.
+
+Active learning (\cite{Settles2012}) offers a solution to this problem, by positing machine learning techniques and models which are interactively trained by a human operator, making more efficient use of operator effort. In addition, there is potential for this active training process to be carried out implicitly as a by-product of some other information retrieval task being carried out by the operator.
+
+\section{Background}
+\label{sec:Background}
+The BBC have several large archives of audiovisual and textual material which would benefit from a concept map, including the Redux (\cite{Butterworth2008}) and World Service Archive (\cite{Raimond}) projects. Manually producing concept maps for each programme within these archives would be almost impossible, due to the size of the archives themselves and the breadth of the subject matter covered. Therefore, they offer an ideal opportunity to research computer-assisted (specifically, active learning-based) means of producing concept maps.
+
+Previous work carried out by BBC Research and Development and UCL has included the use of interactive concept maps as a second-screen companion to science documentaries (\cite{Dowell2014}), and the use of semantic web and linked data techniques similar to concept maps to aid in search and discovery tasks (\cite{Raimond2013}). This work offers a valuable grounding for further research into using active learning techniques to identify conceptual structure within BBC programmes, as well as identifying the semantic relationships and commonalities between them. We anticipate that this work would have useful applications both for information discovery and retrieval, and for the production of interactive concept maps to be used as a learning tool.
+
+\section{Proposed research topics}
+\label{sec:Proposed research topics}
+
+This research project would build upon previous work in the fields of machine learning and intelligent systems, natural language processing, information retrieval and human-computer interaction, and offers the potential for novel contributions in any of these areas. In particular, we have identified the potential for interesting contributions in the following specific areas:
+
+\subsection{Intelligent tools to aid the production of concept maps}
+
+Using machine learning and natural language processing techniques to design innovative tools for producing concept maps. For instance, topic modelling and clustering algorithms could be used to produce a `palette' of suggested concepts and relationships from which a human user could build a map. This act of selecting an appropriate concept or relationship could then be used to incrementally improve the suggestion algorithm, in an active manner. These tools could also incorporate external sources of background knowledge, or feed back into more general semantic mapping projects such as DBPedia (\cite{Auer2007}). This could build upon existing work which uses the WordNet corpus (\cite{PrincetonUniversity2010}) to assist in concept mapping tasks, such as \cite{Kornilakis} and \cite{Canas2003}.
+
+An alternative approach to the construction of concept maps, rather than relying on a single expert user to annotate a programme, could combine partial maps from multiple (expert or non-expert) users in order to produce a complete map as an emergent result of a collaborative process. Here too, intelligent systems based on the principle of active learning could offer some advantage. For example, a system which detected a high level of variance or disagreement between users concerning the form of a particular subgraph of the concept map, could then choose to focus the efforts of subsequent users on that particular area of the concept map, rather than subgraphs which already have a high degree of consensus. In addition, the evaluation of the effectiveness of such a `wisdom of crowds` approach to creating concept maps (vs manual annotation by an individual skilled expert) could also be a fruitful line of enquiry.
+
+\subsection{Incorporating active learning techniques into existing information retrieval tasks}
+
+Active learning has been shown (\cite{Lewis1994}) to offer improvements over conventional supervised learning (in terms of reduced error per additional training example) in simulations of information retrieval tasks. What is less clear, however, is how well this improvement carries over to a real-world setting. In particular, when incorporating active learning techniques into an existing information retrieval task, there is a tension between the two competing tasks of the system \todo{In the case where active training is latent - expand on this.} ("Return the documents which are most relevant to this user's query" vs "Leverage this user's actions to improve the system's performance on subsequent queries"). This tension is analogous to the \textit{exploration-exploitation trade-off} of both the reinforcement learning (\cite{Kaelbling1996}) and organisation theory (\cite{March1991}) literature. The use cases we have identified within the BBC archive would be a useful context for evaluating active learning techniques within the context of real user behaviour, and hence obtaining a deeper understanding of their effectiveness.
+
+\subsection{Using concept maps to aid information retrieval and discovery}
+The use of graphs of semantic concepts and relationships has been used to great effect for knowledge management and information retrieval, and the same tools and techniques described above for creating concept maps of individual programmes could in principle be used to create semantic networks describing the topics and concepts mentioned across the whole archive. For example, correspondences between the concept maps of individual programmes could be identified, and a composite concept map, consisting of the union of the concept maps of each programme could be constructed, with each node and edge annotated by the programme(s) from which it originated. In this way, individual programme concept maps could be combined to produce a semantic network describing the entire archive, which could then be exposed using semantic web (\cite{Berners-lee2002}) and linked data (\cite{Bizer2009}) tools and standards to allow querying and discovery of programmes.
+
+\subsection{Evaluating the effectiveness of intelligent systems for concept mapping and information retrieval}
+\todo[inline]{
+  TODO:\\
+  - Human interpretation of latent topic language models. \\
+  - Mental models of opaque intelligent systems.
+  - correspondence between mental schemata of users and topic / relationship model in system \\
+  - Distributed cognition as a framework for understanding this \\
+}
+\printbibliography
+\end{document}

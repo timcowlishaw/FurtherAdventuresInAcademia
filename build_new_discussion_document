@@ -1,0 +1,9 @@
+pdflatex new_discussion_document
+bibtex new_discussion_document
+pdflatex new_discussion_document
+echo -e "\nPossibly Misspelled words: "
+aspell --lang=en create master ./stopwords.rws < stopwords.wordlist
+cat new_discussion_document.tex | aspell list -d en_GB --mode=tex --add-extra-dicts=./stopwords.rws
+echo -e "\nWord counts:"
+texcount new_discussion_document.tex
+open -a Preview new_discussion_document.pdf
